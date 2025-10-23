@@ -1,0 +1,2003 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Get Tox'd | Flat-Rate Botox with Unlimited Units | Houston, TX</title>
+    <meta name="description" content="Stress-free Botox treatments in Houston with flat-rate pricing and unlimited units. Visit us in Vintage Park or Bellaire. FDA-approved, 15+ years experience.">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant:wght@300;400;500;600;700&family=Montserrat:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <!-- Font Awesome for Icons -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.4.0/css/all.min.css">
+    
+    <style>
+        /* ========================================
+           RESET & BASE STYLES
+        ======================================== */
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        :root {
+            /* Colors */
+            --primary-dark: #1a1a1a;
+            --primary-black: #000000;
+            --primary-white: #ffffff;
+            --beige-light: #f5f3f0;
+            --beige-medium: #e8e4de;
+            --beige-dark: #d4cfc7;
+            --gold-accent: #c9a961;
+            --text-dark: #2c2c2c;
+            --text-medium: #5a5a5a;
+            --text-light: #8a8a8a;
+            --success-green: #4a7c59;
+            
+            /* Typography */
+            --font-serif: 'Cormorant', serif;
+            --font-sans: 'Montserrat', sans-serif;
+            
+            /* Spacing */
+            --section-padding: 80px 0;
+            --container-padding: 0 20px;
+            
+            /* Transitions */
+            --transition-smooth: all 0.3s ease;
+        }
+
+        body {
+            font-family: var(--font-sans);
+            color: var(--text-dark);
+            line-height: 1.6;
+            overflow-x: hidden;
+            background-color: var(--primary-white);
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: var(--container-padding);
+        }
+
+        /* ========================================
+           TYPOGRAPHY
+        ======================================== */
+
+        h1, h2, h3, h4, h5, h6 {
+            font-family: var(--font-serif);
+            line-height: 1.2;
+            color: var(--primary-dark);
+        }
+
+        h1 {
+            font-size: 3.5rem;
+            font-weight: 600;
+        }
+
+        h2 {
+            font-size: 2.5rem;
+            font-weight: 600;
+        }
+
+        h3 {
+            font-size: 1.75rem;
+            font-weight: 500;
+        }
+
+        h4 {
+            font-size: 1.25rem;
+            font-weight: 600;
+        }
+
+        p {
+            font-size: 1rem;
+            color: var(--text-medium);
+        }
+
+        /* ========================================
+           HEADER & NAVIGATION
+        ======================================== */
+
+        .header {
+            background-color: var(--primary-white);
+            padding: 20px 0;
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+        }
+
+        .header-content {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        /* NEW: Style for the text logo */
+        .logo-text {
+            font-family: var(--font-serif);
+            font-size: 2.2rem; 
+            font-weight: 700;
+            letter-spacing: 0.05em;
+            line-height: 1; 
+        }
+
+        /* Updated .logo to set text color and ensure vertical centering in the header */
+        .logo {
+            height: 50px;
+            width: auto;
+            object-fit: contain;
+            display: flex;
+            align-items: center;
+            color: var(--primary-dark); /* Header text color */
+        }
+
+        .nav {
+            display: flex;
+            gap: 30px;
+            align-items: center;
+        }
+
+        .nav-link {
+            color: var(--text-dark);
+            text-decoration: none;
+            font-weight: 500;
+            font-size: 0.95rem;
+            transition: var(--transition-smooth);
+        }
+
+        .nav-link:hover {
+            color: var(--gold-accent);
+        }
+
+        /* ========================================
+           BUTTONS & CTAs
+        ======================================== */
+
+        .cta-button {
+            display: inline-block;
+            padding: 16px 40px;
+            background-color: var(--primary-black);
+            color: var(--primary-white);
+            text-decoration: none;
+            font-weight: 600;
+            font-size: 1rem;
+            border-radius: 4px;
+            transition: var(--transition-smooth);
+            border: 2px solid var(--primary-black);
+            text-align: center;
+            cursor: pointer;
+        }
+
+        .cta-button:hover {
+            background-color: var(--primary-white);
+            color: var(--primary-black);
+            transform: translateY(-2px);
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+        }
+
+        .cta-button-small {
+            padding: 10px 24px;
+            font-size: 0.9rem;
+        }
+
+        .cta-button-large {
+            padding: 18px 50px;
+            font-size: 1.1rem;
+        }
+
+        .cta-button-hero {
+            margin-top: 20px;
+        }
+
+        /* ========================================
+           IMAGE LOADING & PLACEHOLDERS
+        ======================================== */
+
+        .image-container {
+            position: relative;
+            width: 100%;
+            height: 100%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            background-color: var(--beige-medium);
+            border-radius: 8px;
+            min-height: 200px; /* Default minimum height for content images */
+        }
+        
+        .loading-spinner {
+            border: 4px solid rgba(255, 255, 255, 0.3);
+            border-top: 4px solid var(--gold-accent);
+            border-radius: 50%;
+            width: 40px;
+            height: 40px;
+            animation: spin 1s linear infinite;
+        }
+        
+        .hero .image-container {
+             min-height: 100vh;
+             background-color: var(--primary-dark);
+        }
+
+        @keyframes spin {
+            0% { transform: rotate(0deg); }
+            100% { transform: rotate(360deg); }
+        }
+
+        /* Styles for images after load */
+        .hero-bg-image {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            object-position: center;
+            position: absolute;
+            top: 0;
+            left: 0;
+        }
+
+        /* Hide spinner/placeholder content once image is loaded */
+        .image-container.loaded .loading-spinner {
+            display: none;
+        }
+        .image-container.loaded img {
+            opacity: 1;
+        }
+
+        /* ========================================
+           HERO SECTION
+        ======================================== */
+
+        .hero {
+            position: relative;
+            min-height: 100vh;
+            display: flex;
+            align-items: center;
+            overflow: hidden;
+        }
+
+        .hero-background {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            z-index: 0;
+        }
+
+        .hero-overlay {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(135deg, rgba(0, 0, 0, 0.7) 0%, rgba(0, 0, 0, 0.4) 100%);
+        }
+
+        .hero-content {
+            position: relative;
+            z-index: 1;
+            padding: 100px 0;
+        }
+
+        .hero-text {
+            max-width: 700px;
+        }
+
+        .hero-title {
+            color: var(--primary-white);
+            font-size: 4rem;
+            margin-bottom: 20px;
+            text-shadow: 2px 2px 10px rgba(0, 0, 0, 0.3);
+        }
+
+        .hero-subtitle {
+            color: var(--beige-light);
+            font-size: 1.25rem;
+            margin-bottom: 30px;
+            line-height: 1.8;
+        }
+
+        .hero-locations {
+            display: flex;
+            gap: 20px;
+            margin-bottom: 30px;
+        }
+
+        .location-tag {
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            padding: 10px 20px;
+            background-color: rgba(255, 255, 255, 0.15);
+            backdrop-filter: blur(10px);
+            border-radius: 30px;
+            color: var(--primary-white);
+            font-weight: 500;
+        }
+
+        .location-tag i {
+            color: var(--gold-accent);
+        }
+
+        .hero-disclaimer {
+            margin-top: 20px;
+            color: var(--beige-medium);
+            font-size: 0.9rem;
+        }
+
+        /* ========================================
+           PROBLEM/SOLUTION SECTION
+        ======================================== */
+
+        .problem-solution {
+            padding: var(--section-padding);
+            background: linear-gradient(135deg, var(--beige-light) 0%, var(--primary-white) 100%);
+        }
+
+        .ps-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 40px;
+            margin-top: 40px;
+        }
+
+        .ps-card {
+            background-color: var(--primary-white);
+            padding: 40px;
+            border-radius: 8px;
+            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
+            transition: var(--transition-smooth);
+        }
+
+        .ps-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 8px 30px rgba(0, 0, 0, 0.12);
+        }
+
+        .ps-icon {
+            font-size: 3rem;
+            margin-bottom: 20px;
+        }
+
+        .problem-card .ps-icon {
+            color: var(--text-medium);
+        }
+
+        .solution-card .ps-icon {
+            color: var(--success-green);
+        }
+
+        .ps-card h3 {
+            margin-bottom: 15px;
+            font-size: 1.75rem;
+        }
+
+        .ps-card p {
+            margin-bottom: 20px;
+        }
+
+        .problem-list,
+        .solution-list {
+            list-style: none;
+        }
+
+        .problem-list li,
+        .solution-list li {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+            margin-bottom: 12px;
+            font-size: 0.95rem;
+        }
+
+        .problem-list i {
+            color: #c44545;
+        }
+
+        .solution-list i {
+            color: var(--success-green);
+        }
+
+        /* ========================================
+           OFFER SECTION
+        ======================================== */
+
+        .offer {
+            padding: var(--section-padding);
+        }
+
+        .section-header {
+            text-align: center;
+            margin-bottom: 60px;
+        }
+
+        .section-title {
+            margin-bottom: 15px;
+        }
+
+        .section-subtitle {
+            font-size: 1.2rem;
+            color: var(--text-medium);
+        }
+
+        .offer-main {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 50px;
+            margin-bottom: 50px;
+            align-items: center;
+        }
+
+        .offer-hero-image {
+            width: 100%;
+            height: 100%;
+            border-radius: 8px;
+            overflow: hidden;
+            box-shadow: 0 8px 30px rgba(0, 0, 0, 0.15);
+        }
+
+        .offer-hero-image img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            transition: var(--transition-smooth);
+            opacity: 0; /* Starts hidden, faded in after generation */
+        }
+
+        .offer-hero-image:hover img {
+            transform: scale(1.05);
+        }
+
+        .offer-description h3 {
+            margin-bottom: 20px;
+        }
+
+        .offer-description p {
+            margin-bottom: 30px;
+            line-height: 1.8;
+        }
+
+        .treatment-areas {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 15px;
+        }
+
+        .treatment-area {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            padding: 12px;
+            background-color: var(--beige-light);
+            border-radius: 6px;
+        }
+
+        .treatment-area i {
+            color: var(--success-green);
+            font-size: 1.2rem;
+        }
+
+        .offer-benefits {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 30px;
+            margin-bottom: 50px;
+        }
+
+        .benefit-card {
+            text-align: center;
+            padding: 30px;
+            background-color: var(--beige-light);
+            border-radius: 8px;
+            transition: var(--transition-smooth);
+        }
+
+        .benefit-card:hover {
+            background-color: var(--beige-medium);
+            transform: translateY(-5px);
+        }
+
+        .benefit-icon {
+            font-size: 2.5rem;
+            color: var(--gold-accent);
+            margin-bottom: 15px;
+        }
+
+        .benefit-card h4 {
+            margin-bottom: 10px;
+        }
+
+        .benefit-card p {
+            font-size: 0.95rem;
+        }
+
+        .results-section {
+            background: linear-gradient(135deg, var(--primary-black) 0%, var(--primary-dark) 100%);
+            padding: 50px;
+            border-radius: 8px;
+            color: var(--primary-white);
+            margin-bottom: 40px;
+        }
+
+        .results-section h3 {
+            color: var(--primary-white);
+            text-align: center;
+            margin-bottom: 40px;
+            font-size: 2rem;
+        }
+
+        .results-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 30px;
+        }
+
+        .result-item {
+            text-align: center;
+        }
+
+        .result-item i {
+            font-size: 2rem;
+            color: var(--gold-accent);
+            margin-bottom: 15px;
+        }
+
+        .result-item p {
+            color: var(--beige-light);
+        }
+
+        .offer-cta {
+            text-align: center;
+        }
+
+        .cta-subtext {
+            margin-top: 15px;
+            font-style: italic;
+            color: var(--text-light);
+        }
+
+        /* ========================================
+           WHY US SECTION
+        ======================================== */
+
+        .why-us {
+            padding: var(--section-padding);
+            background-color: var(--beige-light);
+        }
+
+        .why-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 30px;
+            margin-top: 40px;
+        }
+
+        .why-card {
+            background-color: var(--primary-white);
+            padding: 35px;
+            border-radius: 8px;
+            text-align: center;
+            transition: var(--transition-smooth);
+            box-shadow: 0 2px 15px rgba(0, 0, 0, 0.05);
+        }
+
+        .why-card:hover {
+            transform: translateY(-8px);
+            box-shadow: 0 8px 30px rgba(0, 0, 0, 0.15);
+        }
+
+        .why-icon {
+            font-size: 2.5rem;
+            color: var(--gold-accent);
+            margin-bottom: 20px;
+        }
+
+        .why-card h4 {
+            margin-bottom: 15px;
+        }
+
+        .why-card p {
+            font-size: 0.95rem;
+            line-height: 1.7;
+        }
+
+        /* ========================================
+           TESTIMONIALS SECTION
+        ======================================== */
+
+        .testimonials {
+            padding: var(--section-padding);
+        }
+
+        .testimonials-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 30px;
+            margin-top: 40px;
+        }
+
+        .testimonial-card {
+            background-color: var(--beige-light);
+            padding: 35px;
+            border-radius: 8px;
+            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
+        }
+
+        .stars {
+            color: var(--gold-accent);
+            margin-bottom: 20px;
+            font-size: 1.1rem;
+        }
+
+        .testimonial-text {
+            font-style: italic;
+            line-height: 1.8;
+            margin-bottom: 20px;
+            color: var(--text-dark);
+        }
+
+        .testimonial-author {
+            font-weight: 600;
+            color: var(--primary-dark);
+        }
+
+        /* ========================================
+           LOCATIONS SECTION
+        ======================================== */
+
+        .locations {
+            padding: var(--section-padding);
+            background-color: var(--beige-light);
+        }
+
+        .locations-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(450px, 1fr));
+            gap: 40px;
+            margin-top: 40px;
+        }
+
+        .location-card {
+            background-color: var(--primary-white);
+            border-radius: 8px;
+            overflow: hidden;
+            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+            transition: var(--transition-smooth);
+        }
+
+        .location-card:hover {
+            transform: translateY(-8px);
+            box-shadow: 0 8px 35px rgba(0, 0, 0, 0.15);
+        }
+
+        .location-image {
+            width: 100%;
+            height: 300px;
+            overflow: hidden;
+        }
+
+        .location-image img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            transition: var(--transition-smooth);
+            opacity: 0; /* Starts hidden, faded in after generation */
+        }
+
+        .location-card:hover .location-image img {
+            transform: scale(1.1);
+        }
+
+        .location-content {
+            padding: 35px;
+        }
+
+        .location-content h3 {
+            margin-bottom: 25px;
+            font-size: 2rem;
+        }
+
+        .location-details {
+            margin-bottom: 30px;
+        }
+
+        .location-detail {
+            display: flex;
+            gap: 15px;
+            margin-bottom: 20px;
+        }
+
+        .location-detail i {
+            color: var(--gold-accent);
+            font-size: 1.2rem;
+            margin-top: 3px;
+        }
+
+        .location-detail p {
+            line-height: 1.6;
+        }
+
+        .location-cta {
+            display: inline-block;
+            width: 100%;
+            padding: 14px 30px;
+            background-color: var(--primary-black);
+            color: var(--primary-white);
+            text-decoration: none;
+            font-weight: 600;
+            text-align: center;
+            border-radius: 4px;
+            transition: var(--transition-smooth);
+        }
+
+        .location-cta:hover {
+            background-color: var(--gold-accent);
+        }
+
+        /* ========================================
+           MEMBERSHIP SECTION
+        ======================================== */
+
+        .membership {
+            padding: var(--section-padding);
+            background: linear-gradient(135deg, var(--primary-dark) 0%, var(--primary-black) 100%);
+            color: var(--primary-white);
+        }
+
+        .membership-content {
+            text-align: center;
+            max-width: 900px;
+            margin: 0 auto;
+        }
+
+        .membership-content h2 {
+            color: var(--primary-white);
+            margin-bottom: 20px;
+            font-size: 2.5rem;
+        }
+
+        .membership-intro {
+            font-size: 1.2rem;
+            color: var(--beige-light);
+            margin-bottom: 40px;
+        }
+
+        .membership-benefits {
+            display: grid;
+            grid-template-columns: 1fr;
+            gap: 20px;
+            margin-bottom: 40px;
+            text-align: left;
+        }
+
+        .membership-benefit {
+            display: flex;
+            align-items: center;
+            gap: 15px;
+            padding: 20px;
+            background-color: rgba(255, 255, 255, 0.1);
+            border-radius: 6px;
+        }
+
+        .membership-benefit i {
+            color: var(--gold-accent);
+            font-size: 1.5rem;
+        }
+
+        .membership-benefit span {
+            font-size: 1.05rem;
+            color: var(--primary-white);
+        }
+
+        .membership-cta-text {
+            font-size: 1.1rem;
+            font-style: italic;
+            color: var(--beige-medium);
+        }
+
+        /* ========================================
+           CONSULTATION FORM SECTION
+        ======================================== */
+
+        .consultation-form {
+            padding: var(--section-padding);
+            position: relative;
+            min-height: 900px;
+            display: flex;
+            align-items: center;
+        }
+
+        .consultation-background {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            z-index: 0;
+        }
+
+        .consultation-background img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            object-position: center;
+            opacity: 0; /* Starts hidden, faded in after generation */
+        }
+
+        .consultation-overlay {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(135deg, rgba(0, 0, 0, 0.85) 0%, rgba(0, 0, 0, 0.6) 100%);
+        }
+
+        .consultation-content {
+            position: relative;
+            z-index: 1;
+        }
+
+        .form-wrapper {
+            max-width: 700px;
+            margin: 0 auto;
+            background-color: var(--primary-white);
+            padding: 50px;
+            border-radius: 8px;
+            box-shadow: 0 10px 50px rgba(0, 0, 0, 0.3);
+        }
+
+        .form-wrapper h2 {
+            text-align: center;
+            margin-bottom: 15px;
+        }
+
+        .form-intro {
+            text-align: center;
+            margin-bottom: 40px;
+            color: var(--text-medium);
+        }
+
+        .consultation-form-element {
+            display: flex;
+            flex-direction: column;
+            gap: 20px;
+        }
+
+        .form-row {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 20px;
+        }
+
+        .form-group {
+            display: flex;
+            flex-direction: column;
+        }
+
+        .form-group label {
+            font-weight: 600;
+            margin-bottom: 8px;
+            color: var(--primary-dark);
+        }
+
+        .form-group input,
+        .form-group select,
+        .form-group textarea {
+            padding: 14px;
+            border: 2px solid var(--beige-medium);
+            border-radius: 4px;
+            font-family: var(--font-sans);
+            font-size: 1rem;
+            transition: var(--transition-smooth);
+        }
+
+        .form-group input:focus,
+        .form-group select:focus,
+        .form-group textarea:focus {
+            outline: none;
+            border-color: var(--gold-accent);
+        }
+
+        .form-group input.error,
+        .form-group select.error {
+            border-color: #c44545;
+        }
+
+        .form-disclaimer {
+            text-align: center;
+            font-size: 0.85rem;
+            color: var(--text-light);
+            margin-top: 10px;
+        }
+
+        .form-success {
+            text-align: center;
+            padding: 40px;
+        }
+
+        .form-success i {
+            font-size: 4rem;
+            color: var(--success-green);
+            margin-bottom: 20px;
+        }
+
+        .form-success h3 {
+            margin-bottom: 15px;
+        }
+
+        /* ========================================
+           FOOTER
+        ======================================== */
+
+        .footer {
+            background-color: var(--primary-dark);
+            color: var(--beige-light);
+            padding: 50px 0 20px;
+        }
+
+        .footer-content {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 40px;
+            margin-bottom: 40px;
+        }
+
+        .footer-brand p {
+            margin-top: 15px;
+            line-height: 1.8;
+        }
+
+        /* Updated .footer-logo to style the text logo */
+        .footer-logo {
+            height: 60px;
+            width: auto;
+            object-fit: contain;
+            /* Removed image filter style */
+            display: flex;
+            align-items: center;
+            color: var(--primary-white); /* Footer text color */
+        }
+
+        .footer h4 {
+            color: var(--primary-white);
+            margin-bottom: 20px;
+        }
+
+        .footer h5 {
+            color: var(--gold-accent);
+            margin-bottom: 8px;
+        }
+
+        .footer-location {
+            margin-bottom: 20px;
+        }
+
+        .footer-location p {
+            font-size: 0.9rem;
+            color: var(--beige-medium);
+        }
+
+        .footer-contact a {
+            color: var(--beige-light);
+            text-decoration: none;
+            transition: var(--transition-smooth);
+        }
+
+        .footer-contact a:hover {
+            color: var(--gold-accent);
+        }
+
+        .footer-bottom {
+            border-top: 1px solid rgba(255, 255, 255, 0.1);
+            padding-top: 20px;
+            text-align: center;
+        }
+
+        .footer-bottom p {
+            color: var(--beige-medium);
+            font-size: 0.9rem;
+            margin-bottom: 5px;
+        }
+
+        .footer-disclaimer {
+            font-style: italic;
+            font-size: 0.85rem;
+        }
+
+        /* ========================================
+           ANIMATIONS
+        ======================================== */
+
+        @keyframes fadeIn {
+            from {
+                opacity: 0;
+                transform: translateY(20px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        @keyframes slideInLeft {
+            from {
+                opacity: 0;
+                transform: translateX(-50px);
+            }
+            to {
+                opacity: 1;
+                transform: translateX(0);
+            }
+        }
+
+        @keyframes slideInRight {
+            from {
+                opacity: 0;
+                transform: translateX(50px);
+            }
+            to {
+                opacity: 1;
+                transform: translateX(0);
+            }
+        }
+
+        .fade-in {
+            /* Initial state handled by JS Intersection Observer */
+            /* Default fallback for non-JS: */
+            opacity: 1; 
+        }
+
+        .slide-in-left {
+            /* Initial state handled by JS Intersection Observer */
+            opacity: 1;
+        }
+
+        .slide-in-right {
+            /* Initial state handled by JS Intersection Observer */
+            opacity: 1;
+        }
+
+        /* ========================================
+           RESPONSIVE DESIGN
+        ======================================== */
+
+        @media (max-width: 768px) {
+            h1 {
+                font-size: 2.5rem;
+            }
+            
+            h2 {
+                font-size: 2rem;
+            }
+            
+            .hero-title {
+                font-size: 2.5rem;
+            }
+            
+            .nav {
+                flex-direction: column;
+                gap: 15px;
+            }
+            
+            .header-content {
+                flex-direction: column;
+                gap: 20px;
+            }
+            
+            .ps-grid,
+            .offer-main,
+            .form-row {
+                grid-template-columns: 1fr;
+            }
+            
+            .locations-grid {
+                grid-template-columns: 1fr;
+            }
+            
+            .form-wrapper {
+                padding: 30px 20px;
+            }
+            
+            .hero-locations {
+                flex-direction: column;
+            }
+            
+            .offer-hero-image {
+                height: 300px;
+            }
+            
+            .results-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+
+        @media (max-width: 480px) {
+            .cta-button {
+                padding: 12px 30px;
+                font-size: 0.9rem;
+            }
+            
+            .hero-title {
+                font-size: 2rem;
+            }
+            
+            .section-title {
+                font-size: 1.8rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Header -->
+    <header class="header">
+        <div class="container">
+            <div class="header-content">
+                <!-- LOGO: Text logo "Get Tox'd" -->
+                <div class="logo-text logo">Get Tox'd</div>
+                <nav class="nav">
+                    <a href="#offer" class="nav-link">Our Offer</a>
+                    <a href="#why-us" class="nav-link">Why Us</a>
+                    <a href="#locations" class="nav-link">Locations</a>
+                    <a href="#consultation" class="cta-button-small">Book Now</a>
+                </nav>
+            </div>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="hero" id="hero">
+        <div class="hero-background">
+            <!-- AI IMAGE: Hero Background -->
+            <div class="image-container" data-prompt="Elegant, sophisticated black and white portrait of a woman with natural, smooth skin looking directly at the camera, luxurious soft lighting, medical aesthetics, cinematic quality, high contrast, clean lines">
+                <div class="loading-spinner"></div>
+                <img class="hero-bg-image" alt="Elegant woman showcasing natural Botox results">
+            </div>
+            <div class="hero-overlay"></div>
+        </div>
+        <div class="container">
+            <div class="hero-content">
+                <div class="hero-text">
+                    <h1 class="hero-title fade-in">Flat-Rate Botox.<br>Unlimited Units.<br>No Surprises.</h1>
+                    <p class="hero-subtitle fade-in">Experience stress-free Botox treatments with transparent pricing at our Houston locations in Vintage Park and Bellaire.</p>
+                    <div class="hero-locations fade-in">
+                        <div class="location-tag">
+                            <i class="fas fa-map-marker-alt"></i>
+                            <span>Vintage Park</span>
+                        </div>
+                        <div class="location-tag">
+                            <i class="fas fa-map-marker-alt"></i>
+                            <span>Bellaire</span>
+                        </div>
+                    </div>
+                    <a href="#consultation" class="cta-button cta-button-hero fade-in">Get Your Free Consultation</a>
+                    <p class="hero-disclaimer fade-in">FDA-Approved Products • 15+ Years Experience • Licensed Providers</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Problem/Solution Section -->
+    <section class="problem-solution">
+        <div class="container">
+            <div class="ps-grid">
+                <div class="ps-card problem-card slide-in-left">
+                    <div class="ps-icon">
+                        <i class="fas fa-question-circle"></i>
+                    </div>
+                    <h3>Tired of Botox Pricing Confusion?</h3>
+                    <p>Most clinics charge per unit, leaving you worried about costs and whether you're getting enough product for real results.</p>
+                    <ul class="problem-list">
+                        <li><i class="fas fa-times"></i> Unclear final pricing</li>
+                        <li><i class="fas fa-times"></i> Anxiety about unit counts</li>
+                        <li><i class="fas fa-times"></i> Surprise bills at checkout</li>
+                        <li><i class="fas fa-times"></i> Inconsistent results</li>
+                    </ul>
+                </div>
+                <div class="ps-card solution-card slide-in-right">
+                    <div class="ps-icon">
+                        <i class="fas fa-check-circle"></i>
+                    </div>
+                    <h3>We Make Botox Simple & Affordable</h3>
+                    <p>At Get Tox'd, you pay a flat rate per treatment area with unlimited units included. No counting, no surprises, just beautiful results.</p>
+                    <ul class="solution-list">
+                        <li><i class="fas fa-check"></i> One flat price per area</li>
+                        <li><i class="fas fa-check"></i> Unlimited units included</li>
+                        <li><i class="fas fa-check"></i> Know your cost upfront</li>
+                        <li><i class="fas fa-check"></i> Consistent, natural results</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- The Offer Section -->
+    <section class="offer" id="offer">
+        <div class="container">
+            <div class="section-header fade-in">
+                <h2 class="section-title">Our Most Popular Treatment</h2>
+                <p class="section-subtitle">The Full Upper Face Treatment: Forehead, Mid Brows & Eyes</p>
+            </div>
+
+            <div class="offer-content">
+                <div class="offer-main fade-in">
+                    <!-- AI IMAGE: Happy Client / Results -->
+                    <div class="offer-hero-image image-container" data-prompt="Close up portrait of a middle aged woman smiling, showing natural and smooth forehead and eye area, professional lighting, warm beige background, feeling refreshed and confident, soft focus">
+                         <div class="loading-spinner"></div>
+                        <img alt="Happy client showing natural-looking Botox results" loading="lazy">
+                    </div>
+                    <div class="offer-description">
+                        <h3>What's Included</h3>
+                        <p>A comprehensive upper-face treatment designed to smooth forehead lines, frown lines (11s), and crow's feet for a refreshed, rested, and natural-looking result.</p>
+                        <div class="treatment-areas">
+                            <div class="treatment-area">
+                                <i class="fas fa-check-circle"></i>
+                                <span>Forehead Lines</span>
+                            </div>
+                            <div class="treatment-area">
+                                <i class="fas fa-check-circle"></i>
+                                <span>Frown Lines (11s)</span>
+                            </div>
+                            <div class="treatment-area">
+                                <i class="fas fa-check-circle"></i>
+                                <span>Crow's Feet</span>
+                            </div>
+                            <div class="treatment-area">
+                                <i class="fas fa-check-circle"></i>
+                                <span>Unlimited Units</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="offer-benefits">
+                    <div class="benefit-card fade-in">
+                        <div class="benefit-icon">
+                            <i class="fas fa-dollar-sign"></i>
+                        </div>
+                        <h4>Flat-Rate Pricing</h4>
+                        <p>One price for the entire treatment area. No unit counting, no surprises at checkout.</p>
+                    </div>
+                    <div class="benefit-card fade-in">
+                        <div class="benefit-icon">
+                            <i class="fas fa-infinity"></i>
+                        </div>
+                        <h4>Unlimited Units</h4>
+                        <p>We use as many units as needed to achieve your desired results. Full coverage guaranteed.</p>
+                    </div>
+                    <div class="benefit-card fade-in">
+                        <div class="benefit-icon">
+                            <i class="fas fa-certificate"></i>
+                        </div>
+                        <h4>FDA-Approved Only</h4>
+                        <p>We use only Botox®, Xeomin®, and Dysport® - all FDA-approved neuromodulators.</p>
+                    </div>
+                    <div class="benefit-card fade-in">
+                        <div class="benefit-icon">
+                            <i class="fas fa-hand-holding-heart"></i>
+                        </div>
+                        <h4>Natural Results</h4>
+                        <p>Our technique and dosing are tailored to create balanced, natural expression while smoothing lines.</p>
+                    </div>
+                </div>
+
+                <div class="results-section fade-in">
+                    <h3>What You Can Expect</h3>
+                    <div class="results-grid">
+                        <div class="result-item">
+                            <i class="fas fa-sparkles"></i>
+                            <p>Smoother forehead and reduced wrinkles</p>
+                        </div>
+                        <div class="result-item">
+                            <i class="fas fa-smile"></i>
+                            <p>Refreshed, rested appearance</p>
+                        </div>
+                        <div class="result-item">
+                            <i class="fas fa-calendar-check"></i>
+                            <p>Results visible in 3-7 days</p>
+                        </div>
+                        <div class="result-item">
+                            <i class="fas fa-clock"></i>
+                            <p>Effects last 3-4 months</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="offer-cta fade-in">
+                    <a href="#consultation" class="cta-button cta-button-large">Book Your Treatment Today</a>
+                    <p class="cta-subtext">Free touch-ups included with membership</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Why Get Tox'd Section -->
+    <section class="why-us" id="why-us">
+        <div class="container">
+            <div class="section-header fade-in">
+                <h2 class="section-title">Why Choose Get Tox'd?</h2>
+                <p class="section-subtitle">Experience, expertise, and a commitment to your confidence</p>
+            </div>
+
+            <div class="why-grid">
+                <div class="why-card fade-in">
+                    <div class="why-icon">
+                        <i class="fas fa-user-md"></i>
+                    </div>
+                    <h4>15+ Years Experience</h4>
+                    <p>Our founder brings over 15 years of medical aesthetics expertise, ensuring precise, professional treatments tailored to your goals.</p>
+                </div>
+                <div class="why-card fade-in">
+                    <div class="why-icon">
+                        <i class="fas fa-certificate"></i>
+                    </div>
+                    <h4>Licensed & Certified</h4>
+                    <p>Every provider on our team is licensed, certified, and extensively trained in safe, effective Botox techniques.</p>
+                </div>
+                <div class="why-card fade-in">
+                    <div class="why-icon">
+                        <i class="fas fa-shield-alt"></i>
+                    </div>
+                    <h4>FDA-Approved Products</h4>
+                    <p>We exclusively use FDA-approved neuromodulators: Botox®, Xeomin®, and Dysport® for the safest, most effective results.</p>
+                </div>
+                <div class="why-card fade-in">
+                    <div class="why-icon">
+                        <i class="fas fa-dollar-sign"></i>
+                    </div>
+                    <h4>Transparent Pricing</h4>
+                    <p>Flat-rate pricing per area with unlimited units means no surprises, no anxiety, just stress-free treatments.</p>
+                </div>
+                <div class="why-card fade-in">
+                    <div class="why-icon">
+                        <i class="fas fa-heart"></i>
+                    </div>
+                    <h4>Natural-Looking Results</h4>
+                    <p>Our approach creates subtle, refreshed results that preserve your natural expressions and enhance your confidence.</p>
+                </div>
+                <div class="why-card fade-in">
+                    <div class="why-icon">
+                        <i class="fas fa-hands-helping"></i>
+                    </div>
+                    <h4>Patient-Centered Care</h4>
+                    <p>We take time to understand your goals, answer your questions, and ensure you're comfortable every step of the way.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Testimonials Section -->
+    <section class="testimonials">
+        <div class="container">
+            <div class="section-header fade-in">
+                <h2 class="section-title">What Our Clients Say</h2>
+                <p class="section-subtitle">Real experiences from real people</p>
+            </div>
+
+            <div class="testimonials-grid">
+                <div class="testimonial-card fade-in">
+                    <div class="stars">
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                    </div>
+                    <p class="testimonial-text">"The whole experience was amazing. The space was clean and cute and my nurse was very knowledgeable. I barely felt a thing and my results are perfect. I did the forehead, 11s, and eyes. I look so much more awake! Knowing I'm getting a full dose and I don't have to worry about units took so much stress off of me. Highly Recommend."</p>
+                    <p class="testimonial-author">— Hala Q.</p>
+                </div>
+                <div class="testimonial-card fade-in">
+                    <div class="stars">
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                    </div>
+                    <p class="testimonial-text">"I've been doing Botox for many years and this was one of the best experiences. First of all, it was definitely more affordable than any sale and the results are amazing. I can't go back to the old way. I bought my daughter a gift card and signed up for the membership."</p>
+                    <p class="testimonial-author">— Abby S.</p>
+                </div>
+                <div class="testimonial-card fade-in">
+                    <div class="stars">
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                    </div>
+                    <p class="testimonial-text">"I am new to Botox. I did the full treatment of forehead, middle of brows, and eyes with Xeomin. It wasn't painful at all, she went through all of the pre and post care instructions, answered all of my million questions, and was super patient. Knowing the price in advance made it a no brainer. Glad I chose Tox'd for my first time. I also signed up for the membership to maintain my fabulous results!"</p>
+                    <p class="testimonial-author">— May I.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Locations Section -->
+    <section class="locations" id="locations">
+        <div class="container">
+            <div class="section-header fade-in">
+                <h2 class="section-title">Visit Us at Either Houston Location</h2>
+                <p class="section-subtitle">Two convenient locations to serve you</p>
+            </div>
+
+            <div class="locations-grid">
+                <div class="location-card fade-in">
+                    <div class="location-image image-container" data-prompt="Interior of a modern, clean medical spa reception area, warm beige and white color palette, subtle gold accents, minimalist luxury, focused on professional cleanliness, high resolution, 4:3 aspect ratio">
+                         <div class="loading-spinner"></div>
+                        <img alt="Get Tox'd Vintage Park Location Interior" loading="lazy">
+                    </div>
+                    <div class="location-content">
+                        <h3>Vintage Park</h3>
+                        <div class="location-details">
+                            <div class="location-detail">
+                                <i class="fas fa-map-marker-alt"></i>
+                                <p>118 Vintage Park Blvd<br>Salon Suite 53<br>Houston, TX 77070</p>
+                            </div>
+                            <div class="location-detail">
+                                <i class="fas fa-clock"></i>
+                                <p>By Appointment</p>
+                            </div>
+                        </div>
+                        <a href="#consultation" class="location-cta">Book at Vintage Park</a>
+                    </div>
+                </div>
+
+                <div class="location-card fade-in">
+                    <div class="location-image image-container" data-prompt="Luxury medical spa reception desk, soft warm lighting, plush seating in beige and neutral tones, minimalist design, professional and inviting, high resolution, 4:3 aspect ratio">
+                         <div class="loading-spinner"></div>
+                        <img alt="Get Tox'd Bellaire Location Interior" loading="lazy">
+                    </div>
+                    <div class="location-content">
+                        <h3>Bellaire</h3>
+                        <div class="location-details">
+                            <div class="location-detail">
+                                <i class="fas fa-map-marker-alt"></i>
+                                <p>5103 Bellaire Blvd<br>Phenix Salon Suite 234<br>Bellaire, TX 77401</p>
+                            </div>
+                            <div class="location-detail">
+                                <i class="fas fa-clock"></i>
+                                <p>By Appointment</p>
+                            </div>
+                        </div>
+                        <a href="#consultation" class="location-cta">Book at Bellaire</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Membership Teaser -->
+    <section class="membership">
+        <div class="container">
+            <div class="membership-content fade-in">
+                <h2>Unlock Exclusive Member Benefits</h2>
+                <p class="membership-intro">Join our membership program for consistent results and valuable perks</p>
+                
+                <div class="membership-benefits">
+                    <div class="membership-benefit">
+                        <i class="fas fa-check-circle"></i>
+                        <span>Full Tox treatments with free touch-ups</span>
+                    </div>
+                    <div class="membership-benefit">
+                        <i class="fas fa-check-circle"></i>
+                        <span>Member-only discounts on all services</span>
+                    </div>
+                    <div class="membership-benefit">
+                        <i class="fas fa-check-circle"></i>
+                        <span>Free Vitamin B Complex shots with each treatment</span>
+                    </div>
+                    <div class="membership-benefit">
+                        <i class="fas fa-check-circle"></i>
+                        <span>Birthday Vitamin B Complex shot</span>
+                    </div>
+                    <div class="membership-benefit">
+                        <i class="fas fa-check-circle"></i>
+                        <span>Easy monthly plans for consistent results</span>
+                    </div>
+                </div>
+
+                <p class="membership-cta-text">Ask about membership when you book your consultation</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Consultation Form Section -->
+    <section class="consultation-form" id="consultation">
+        <div class="consultation-background">
+            <!-- AI IMAGE: Consultation Form Background -->
+            <div class="image-container" data-prompt="Soft, ethereal, slightly moody portrait of a woman's face, conveying peacefulness and trust, black and white with subtle beige filter, abstract lines, focus on natural beauty, medical aesthetics">
+                 <div class="loading-spinner"></div>
+                <img alt="Beautiful woman with natural Botox results" loading="lazy">
+            </div>
+            <div class="consultation-overlay"></div>
+        </div>
+        <div class="container">
+            <div class="consultation-content">
+                <div class="form-wrapper fade-in">
+                    <h2>Ready to Experience Stress-Free Botox?</h2>
+                    <p class="form-intro">Book your free consultation today. No pressure, just expert guidance and transparent answers.</p>
+                    
+                    <form id="consultationForm" class="consultation-form-element">
+                        <div class="form-row">
+                            <div class="form-group">
+                                <label for="firstName">First Name *</label>
+                                <input type="text" id="firstName" name="firstName" required>
+                            </div>
+                            <div class="form-group">
+                                <label for="lastName">Last Name *</label>
+                                <input type="text" id="lastName" name="lastName" required>
+                            </div>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="email">Email Address *</label>
+                            <input type="email" id="email" name="email" required>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="phone">Phone Number *</label>
+                            <input type="tel" id="phone" name="phone" required placeholder="(555) 555-5555">
+                        </div>
+
+                        <div class="form-group">
+                            <label for="location">Preferred Location *</label>
+                            <select id="location" name="location" required>
+                                <option value="">Select a location</option>
+                                <option value="vintage-park">Vintage Park</option>
+                                <option value="bellaire">Bellaire</option>
+                                <option value="either">Either Location</option>
+                            </select>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="contactTime">Best Time to Contact</label>
+                            <select id="contactTime" name="contactTime">
+                                <option value="">Select a time</option>
+                                <option value="morning">Morning (9am-12pm)</option>
+                                <option value="afternoon">Afternoon (12pm-5pm)</option>
+                                <option value="evening">Evening (5pm-7pm)</option>
+                            </select>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="message">Questions or Comments (Optional)</label>
+                            <textarea id="message" name="message" rows="4" placeholder="Tell us what you'd like to know or achieve..."></textarea>
+                        </div>
+
+                        <button type="submit" class="cta-button cta-button-large">Request Free Consultation</button>
+                        
+                        <p class="form-disclaimer">By submitting this form, you agree to be contacted by Get Tox'd regarding your consultation. We respect your privacy and will never share your information.</p>
+                    </form>
+
+                    <div id="formSuccess" class="form-success" style="display: none;">
+                        <i class="fas fa-check-circle"></i>
+                        <h3>Thank You!</h3>
+                        <p>We've received your consultation request and will contact you shortly to schedule your appointment.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-brand">
+                    <!-- LOGO: Text logo "Get Tox'd" -->
+                    <div class="logo-text footer-logo">Get Tox'd</div>
+                    <p>Making Botox simple, safe, and affordable in Houston.</p>
+                </div>
+
+                <div class="footer-locations">
+                    <h4>Locations</h4>
+                    <div class="footer-location">
+                        <h5>Vintage Park</h5>
+                        <p>118 Vintage Park Blvd, Suite 53<br>Houston, TX 77070</p>
+                    </div>
+                    <div class="footer-location">
+                        <h5>Bellaire</h5>
+                        <p>5103 Bellaire Blvd, Suite 234<br>Bellaire, TX 77401</p>
+                    </div>
+                </div>
+
+                <div class="footer-contact">
+                    <h4>Get in Touch</h4>
+                    <p><a href="#consultation">Book Consultation</a></p>
+                    <p><a href="https://www.instagram.com/gettoxd" target="_blank" rel="noopener"><i class="fab fa-instagram"></i> Follow on Instagram</a></p>
+                </div>
+            </div>
+
+            <div class="footer-bottom">
+                <p>&copy; 2025 Get Tox'd. All rights reserved.</p>
+                <p class="footer-disclaimer">This is a design sample created for demonstration purposes.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // ========================================
+        // IMAGE GENERATION & UTILITIES
+        // ========================================
+
+        // Delay utility for exponential backoff
+        function delay(ms) {
+            return new Promise(resolve => setTimeout(resolve, ms));
+        }
+
+        /**
+         * Fetches an image URL from the image generation API.
+         * Implements exponential backoff for retries.
+         * @param {string} prompt - The prompt for image generation.
+         * @param {string} aspect_ratio - The desired aspect ratio (e.g., "16:9").
+         * @returns {Promise<string|null>} Base64 image URL or null on failure.
+         */
+        async function generateImage(prompt, aspect_ratio, maxRetries = 3) {
+            const apiKey = ""; 
+            const apiUrl = `https://generativelanguage.googleapis.com/v1beta/models/imagen-3.0-generate-002:predict?key=${apiKey}`;
+            
+            const payload = {
+                instances: [{ prompt: prompt }],
+                parameters: { 
+                    sampleCount: 1,
+                    aspectRatio: aspect_ratio 
+                }
+            };
+
+            for (let i = 0; i < maxRetries; i++) {
+                try {
+                    const response = await fetch(apiUrl, {
+                        method: 'POST',
+                        headers: { 'Content-Type': 'application/json' },
+                        body: JSON.stringify(payload)
+                    });
+
+                    if (!response.ok) {
+                        // Check if the error is due to throttling (e.g., status 429) and retry
+                        if (response.status === 429) {
+                            throw new Error('Throttled');
+                        }
+                        // For other non-OK status, proceed to catch block
+                        throw new Error(`API returned status ${response.status}`);
+                    }
+
+                    const result = await response.json();
+                    
+                    if (result.predictions && result.predictions.length > 0 && result.predictions[0].bytesBase64Encoded) {
+                        const base64Data = result.predictions[0].bytesBase64Encoded;
+                        return `data:image/png;base64,${base64Data}`;
+                    } else {
+                        throw new Error('Invalid image generation response structure.');
+                    }
+
+                } catch (error) {
+                    console.error("Image generation attempt failed:", error.message);
+                    if (error.message === 'Throttled' && i < maxRetries - 1) {
+                        const delayTime = Math.pow(2, i) * 1000; // Exponential backoff (1s, 2s, 4s)
+                        await delay(delayTime);
+                        continue; // Retry
+                    }
+                    return null; // Permanent failure
+                }
+            }
+            return null;
+        }
+
+        // ========================================
+        // IMAGE LOADING LOGIC
+        // ========================================
+
+        document.addEventListener('DOMContentLoaded', () => {
+            const imageContainers = document.querySelectorAll('.image-container');
+            
+            // Function to handle image loading logic
+            async function loadImage(container) {
+                const prompt = container.getAttribute('data-prompt');
+                const imgElement = container.querySelector('img') || container.querySelector('.hero-bg-image');
+                const isHero = container.closest('.hero');
+                
+                // Determine aspect ratio
+                let aspectRatio = isHero ? "16:9" : "4:3";
+                
+                // If it's a hero image, ensure the container is ready for a spinner (it's already set up in CSS)
+                if (isHero) {
+                    container.classList.add('loading');
+                } else {
+                    // For content images, check if they are currently visible (if not, use native lazy load/Intersection Observer)
+                    if (imgElement.loading === 'lazy' && 'loading' in HTMLImageElement.prototype) {
+                        // Rely on native lazy loading if supported
+                        // We will add an Intersection Observer specifically to trigger generation
+                    }
+                }
+                
+                if (prompt && imgElement) {
+                    const imageUrl = await generateImage(prompt, aspectRatio);
+                    
+                    container.querySelector('.loading-spinner')?.remove();
+                    
+                    if (imageUrl) {
+                        imgElement.src = imageUrl;
+                        imgElement.onload = () => {
+                            // Fade in the image gently after loading
+                            imgElement.style.transition = 'opacity 0.8s ease';
+                            imgElement.style.opacity = '1';
+                            container.classList.add('loaded');
+                        };
+                    } else {
+                        // Fallback: Display simple placeholder text if generation fails
+                        container.style.backgroundColor = 'var(--beige-medium)';
+                        container.innerHTML = `<p style="text-align:center; color: var(--text-medium); padding: 20px;">Image failed to load.<br>(${prompt.substring(0, 50)}...)</p>`;
+                    }
+                }
+            }
+
+            // Intersection Observer to initiate loading for below-the-fold images
+            const imageLoadObserver = new IntersectionObserver((entries, observer) => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        const container = entry.target;
+                        loadImage(container);
+                        observer.unobserve(container); // Stop observing once loading is triggered
+                    }
+                });
+            }, { 
+                threshold: 0.1, 
+                rootMargin: '0px 0px -50px 0px' 
+            });
+
+            // Trigger immediate loading for the Hero image (above the fold)
+            imageContainers.forEach(container => {
+                const isHero = container.closest('.hero');
+                if (isHero) {
+                    loadImage(container);
+                } else {
+                    imageLoadObserver.observe(container);
+                }
+            });
+        });
+
+
+        // ========================================
+        // SMOOTH SCROLL
+        // ========================================
+
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                const target = document.querySelector(this.getAttribute('href'));
+                if (target) {
+                    target.scrollIntoView({
+                        behavior: 'smooth',
+                        block: 'start'
+                    });
+                }
+            });
+        });
+
+        // ========================================
+        // PHONE NUMBER FORMATTING
+        // ========================================
+
+        const phoneInput = document.getElementById('phone');
+        if (phoneInput) {
+            phoneInput.addEventListener('input', function (e) {
+                let value = e.target.value.replace(/\D/g, '');
+                
+                if (value.length > 0) {
+                    if (value.length <= 3) {
+                        value = `(${value}`;
+                    } else if (value.length <= 6) {
+                        value = `(${value.slice(0, 3)}) ${value.slice(3)}`;
+                    } else {
+                        value = `(${value.slice(0, 3)}) ${value.slice(3, 6)}-${value.slice(6, 10)}`;
+                    }
+                }
+                
+                e.target.value = value;
+            });
+        }
+
+        // ========================================
+        // FORM VALIDATION & SUBMISSION
+        // ========================================
+
+        const consultationForm = document.getElementById('consultationForm');
+        const formSuccess = document.getElementById('formSuccess');
+
+        if (consultationForm) {
+            consultationForm.addEventListener('submit', function(e) {
+                e.preventDefault();
+                
+                // Get form data
+                const formData = {
+                    firstName: document.getElementById('firstName').value.trim(),
+                    lastName: document.getElementById('lastName').value.trim(),
+                    email: document.getElementById('email').value.trim(),
+                    phone: document.getElementById('phone').value.trim(),
+                    location: document.getElementById('location').value,
+                    contactTime: document.getElementById('contactTime').value,
+                    message: document.getElementById('message').value.trim(),
+                    timestamp: new Date().toISOString(),
+                    source: 'Landing Page - Upper Face Treatment'
+                };
+                
+                // Validate required fields
+                let isValid = true;
+                
+                if (!formData.firstName) {
+                    markFieldError('firstName');
+                    isValid = false;
+                }
+                
+                if (!formData.lastName) {
+                    markFieldError('lastName');
+                    isValid = false;
+                }
+                
+                if (!formData.email || !isValidEmail(formData.email)) {
+                    markFieldError('email');
+                    isValid = false;
+                }
+                
+                if (!formData.phone || formData.phone.replace(/\D/g, '').length !== 10) {
+                    markFieldError('phone');
+                    isValid = false;
+                }
+                
+                if (!formData.location) {
+                    markFieldError('location');
+                    isValid = false;
+                }
+                
+                if (!isValid) {
+                    return;
+                }
+                
+                // Store lead data (demo functionality)
+                storeLeadData(formData);
+                
+                // Show success message
+                consultationForm.style.display = 'none';
+                formSuccess.style.display = 'block';
+                
+                // Log to console (for demo purposes)
+                console.log('✅ New Consultation Request:', formData);
+                
+                // Scroll to success message
+                formSuccess.scrollIntoView({ behavior: 'smooth', block: 'center' });
+            });
+        }
+
+        // ========================================
+        // FORM VALIDATION HELPERS
+        // ========================================
+
+        function markFieldError(fieldId) {
+            const field = document.getElementById(fieldId);
+            if (field) {
+                field.classList.add('error');
+                field.addEventListener('input', function() {
+                    this.classList.remove('error');
+                }, { once: true });
+            }
+        }
+
+        function isValidEmail(email) {
+            const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+            return emailRegex.test(email);
+        }
+
+        // ========================================
+        // LOCAL STORAGE - LEAD MANAGEMENT (Demo Only)
+        // ========================================
+
+        function storeLeadData(leadData) {
+            try {
+                // Get existing leads
+                let leads = JSON.parse(localStorage.getItem('gettoxd_leads') || '[]');
+                
+                // Add new lead
+                leadData.id = generateUniqueId();
+                leads.push(leadData);
+                
+                // Store back
+                localStorage.setItem('gettoxd_leads', JSON.stringify(leads));
+                
+                console.log(`💾 Lead saved! Total leads: ${leads.length}`);
+            } catch (error) {
+                console.error('Error storing lead:', error);
+            }
+        }
+
+        function generateUniqueId() {
+            return 'lead_' + Date.now() + '_' + Math.random().toString(36).substr(2, 9);
+        }
+
+        // ========================================
+        // CONSOLE HELPER FUNCTIONS (for demo)
+        // ========================================
+
+        window.viewLeads = function() {
+            try {
+                const leads = JSON.parse(localStorage.getItem('gettoxd_leads') || '[]');
+                console.log('📋 Total Leads:', leads.length);
+                console.table(leads);
+                return leads;
+            } catch (error) {
+                console.error('Error retrieving leads:', error);
+                return [];
+            }
+        };
+
+        window.clearLeads = function() {
+            try {
+                localStorage.removeItem('gettoxd_leads');
+                console.log('🗑️ All leads cleared!');
+            } catch (error) {
+                console.error('Error clearing leads:', error);
+            }
+        };
+
+        // Show console instructions
+        console.log('%c🎯 Get Tox\'d Landing Page - Demo Mode', 'color: #c9a961; font-size: 16px; font-weight: bold;');
+        console.log('%cLead Management Functions:', 'color: #4a7c59; font-weight: bold;');
+        console.log('  viewLeads()  - View all captured leads');
+        console.log('  clearLeads() - Clear all leads from storage');
+        console.log(' ');
+
+        // ========================================
+        // INTERSECTION OBSERVER - SCROLL ANIMATIONS
+        // ========================================
+
+        const scrollObserverOptions = {
+            threshold: 0.1,
+            rootMargin: '0px 0px -50px 0px'
+        };
+
+        const scrollObserver = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    // Only apply transition logic if image is not currently generating
+                    if (!entry.target.closest('.image-container') || entry.target.closest('.image-container').classList.contains('loaded')) {
+                        entry.target.style.opacity = '1';
+                        entry.target.style.transform = 'translateY(0)';
+                    }
+                }
+            });
+        }, scrollObserverOptions);
+
+        // Observe all animated elements
+        document.addEventListener('DOMContentLoaded', () => {
+            const animatedElements = document.querySelectorAll('.fade-in, .slide-in-left, .slide-in-right');
+            animatedElements.forEach(el => {
+                el.style.opacity = '0';
+                el.style.transform = 'translateY(20px)';
+                el.style.transition = 'opacity 0.8s ease, transform 0.8s ease';
+                scrollObserver.observe(el);
+            });
+        });
+
+        // ========================================
+        // STICKY HEADER ON SCROLL
+        // ========================================
+
+        let lastScroll = 0;
+        const header = document.querySelector('.header');
+
+        window.addEventListener('scroll', () => {
+            const currentScroll = window.pageYOffset;
+            
+            if (currentScroll > 100) {
+                header.style.boxShadow = '0 2px 15px rgba(0, 0, 0, 0.1)';
+            } else {
+                header.style.boxShadow = '0 2px 10px rgba(0, 0, 0, 0.05)';
+            }
+            
+            lastScroll = currentScroll;
+        });
+    </script>
+</body>
+</html>
