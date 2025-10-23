@@ -153,6 +153,42 @@
         }
 
         /* ========================================
+           MOBILE MENU
+        ======================================== */
+
+        .mobile-menu-toggle {
+            display: none; /* Hidden on desktop */
+            background: none;
+            border: none;
+            cursor: pointer;
+            padding: 10px;
+            z-index: 1001;
+            flex-direction: column;
+            gap: 5px;
+        }
+
+        .hamburger-line {
+            width: 25px;
+            height: 3px;
+            background-color: var(--primary-dark);
+            transition: all 0.3s ease;
+            border-radius: 2px;
+        }
+
+        /* Hamburger animation when active */
+        .mobile-menu-toggle.active .hamburger-line:nth-child(1) {
+            transform: rotate(45deg) translate(8px, 8px);
+        }
+
+        .mobile-menu-toggle.active .hamburger-line:nth-child(2) {
+            opacity: 0;
+        }
+
+        .mobile-menu-toggle.active .hamburger-line:nth-child(3) {
+            transform: rotate(-45deg) translate(7px, -7px);
+        }
+
+        /* ========================================
            BUTTONS & CTAs
         ======================================== */
 
@@ -1069,23 +1105,63 @@
             h1 {
                 font-size: 2.5rem;
             }
-            
+
             h2 {
                 font-size: 2rem;
             }
-            
+
             .hero-title {
                 font-size: 2.5rem;
             }
-            
-            .nav {
-                flex-direction: column;
-                gap: 15px;
+
+            /* Show hamburger menu on mobile */
+            .mobile-menu-toggle {
+                display: flex;
             }
-            
-            .header-content {
+
+            /* Hide nav by default on mobile */
+            .nav {
+                position: fixed;
+                top: 70px;
+                left: 0;
+                right: 0;
+                background-color: var(--primary-white);
                 flex-direction: column;
-                gap: 20px;
+                gap: 0;
+                padding: 0;
+                max-height: 0;
+                overflow: hidden;
+                transition: max-height 0.3s ease, box-shadow 0.3s ease;
+                box-shadow: none;
+                z-index: 999;
+            }
+
+            /* Show nav when active */
+            .nav.active {
+                max-height: 300px;
+                box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+                padding: 20px 0;
+            }
+
+            .nav-link {
+                padding: 15px 20px;
+                width: 100%;
+                text-align: center;
+                border-bottom: 1px solid var(--beige-light);
+            }
+
+            .nav-link:last-child {
+                border-bottom: none;
+            }
+
+            .cta-button-small {
+                margin: 10px 20px;
+                width: calc(100% - 40px);
+            }
+
+            .header-content {
+                flex-direction: row;
+                justify-content: space-between;
             }
             
             .ps-grid,
@@ -1138,6 +1214,14 @@
             <div class="header-content">
                 <!-- LOGO: Text logo "Get Tox'd" -->
                 <div class="logo-text logo">Get Tox'd</div>
+
+                <!-- Hamburger Menu Icon (Mobile Only) -->
+                <button class="mobile-menu-toggle" aria-label="Toggle menu">
+                    <span class="hamburger-line"></span>
+                    <span class="hamburger-line"></span>
+                    <span class="hamburger-line"></span>
+                </button>
+
                 <nav class="nav">
                     <a href="#offer" class="nav-link">Our Offer</a>
                     <a href="#why-us" class="nav-link">Why Us</a>
@@ -1614,6 +1698,38 @@
     </footer>
 
     <script>
+        // ========================================
+        // MOBILE MENU TOGGLE
+        // ========================================
+
+        document.addEventListener('DOMContentLoaded', () => {
+            const mobileMenuToggle = document.querySelector('.mobile-menu-toggle');
+            const nav = document.querySelector('.nav');
+            const navLinks = document.querySelectorAll('.nav-link, .cta-button-small');
+
+            // Toggle menu when hamburger is clicked
+            mobileMenuToggle.addEventListener('click', () => {
+                mobileMenuToggle.classList.toggle('active');
+                nav.classList.toggle('active');
+            });
+
+            // Close menu when a nav link is clicked
+            navLinks.forEach(link => {
+                link.addEventListener('click', () => {
+                    mobileMenuToggle.classList.remove('active');
+                    nav.classList.remove('active');
+                });
+            });
+
+            // Close menu when clicking outside
+            document.addEventListener('click', (e) => {
+                if (!nav.contains(e.target) && !mobileMenuToggle.contains(e.target)) {
+                    mobileMenuToggle.classList.remove('active');
+                    nav.classList.remove('active');
+                }
+            });
+        });
+
         // ========================================
         // IMAGE GENERATION & UTILITIES
         // ========================================
