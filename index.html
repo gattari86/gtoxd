@@ -444,7 +444,7 @@
             height: 100%;
             object-fit: cover;
             transition: var(--transition-smooth);
-            opacity: 0; /* Starts hidden, faded in after generation */
+            opacity: 1;
         }
 
         .offer-hero-image:hover img {
@@ -684,7 +684,7 @@
             height: 100%;
             object-fit: cover;
             transition: var(--transition-smooth);
-            opacity: 0; /* Starts hidden, faded in after generation */
+            opacity: 1;
         }
 
         .location-card:hover .location-image img {
@@ -824,7 +824,7 @@
             height: 100%;
             object-fit: cover;
             object-position: center;
-            opacity: 0; /* Starts hidden, faded in after generation */
+            opacity: 1;
         }
 
         .consultation-overlay {
@@ -1151,10 +1151,9 @@
     <!-- Hero Section -->
     <section class="hero" id="hero">
         <div class="hero-background">
-            <!-- AI IMAGE: Hero Background -->
-            <div class="image-container" data-prompt="Elegant, sophisticated black and white portrait of a woman with natural, smooth skin looking directly at the camera, luxurious soft lighting, medical aesthetics, cinematic quality, high contrast, clean lines">
-                <div class="loading-spinner"></div>
-                <img class="hero-bg-image" alt="Elegant woman showcasing natural Botox results">
+            <!-- Hero Background Image -->
+            <div class="image-container loaded">
+                <img src="images/hero-background.png" class="hero-bg-image" alt="Elegant woman showcasing natural Botox results">
             </div>
             <div class="hero-overlay"></div>
         </div>
@@ -1224,10 +1223,9 @@
 
             <div class="offer-content">
                 <div class="offer-main fade-in">
-                    <!-- AI IMAGE: Happy Client / Results -->
-                    <div class="offer-hero-image image-container" data-prompt="Close up portrait of a middle aged woman smiling, showing natural and smooth forehead and eye area, professional lighting, warm beige background, feeling refreshed and confident, soft focus">
-                         <div class="loading-spinner"></div>
-                        <img alt="Happy client showing natural-looking Botox results" loading="lazy">
+                    <!-- Happy Client / Results Image -->
+                    <div class="offer-hero-image image-container loaded">
+                        <img src="images/offer-hero.png" alt="Happy client showing natural-looking Botox results">
                     </div>
                     <div class="offer-description">
                         <h3>What's Included</h3>
@@ -1425,9 +1423,8 @@
 
             <div class="locations-grid">
                 <div class="location-card fade-in">
-                    <div class="location-image image-container" data-prompt="Interior of a modern, clean medical spa reception area, warm beige and white color palette, subtle gold accents, minimalist luxury, focused on professional cleanliness, high resolution, 4:3 aspect ratio">
-                         <div class="loading-spinner"></div>
-                        <img alt="Get Tox'd Vintage Park Location Interior" loading="lazy">
+                    <div class="location-image image-container loaded">
+                        <img src="images/location-vintage-park.png" alt="Get Tox'd Vintage Park Location Interior">
                     </div>
                     <div class="location-content">
                         <h3>Vintage Park</h3>
@@ -1446,9 +1443,8 @@
                 </div>
 
                 <div class="location-card fade-in">
-                    <div class="location-image image-container" data-prompt="Luxury medical spa reception desk, soft warm lighting, plush seating in beige and neutral tones, minimalist design, professional and inviting, high resolution, 4:3 aspect ratio">
-                         <div class="loading-spinner"></div>
-                        <img alt="Get Tox'd Bellaire Location Interior" loading="lazy">
+                    <div class="location-image image-container loaded">
+                        <img src="images/location-bellaire.png" alt="Get Tox'd Bellaire Location Interior">
                     </div>
                     <div class="location-content">
                         <h3>Bellaire</h3>
@@ -1507,10 +1503,9 @@
     <!-- Consultation Form Section -->
     <section class="consultation-form" id="consultation">
         <div class="consultation-background">
-            <!-- AI IMAGE: Consultation Form Background -->
-            <div class="image-container" data-prompt="Soft, ethereal, slightly moody portrait of a woman's face, conveying peacefulness and trust, black and white with subtle beige filter, abstract lines, focus on natural beauty, medical aesthetics">
-                 <div class="loading-spinner"></div>
-                <img alt="Beautiful woman with natural Botox results" loading="lazy">
+            <!-- Consultation Form Background Image -->
+            <div class="image-container loaded">
+                <img src="images/consultation-background.png" alt="Beautiful woman with natural Botox results">
             </div>
             <div class="consultation-overlay"></div>
         </div>
